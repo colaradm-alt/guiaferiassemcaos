@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia de Férias Sem Caos - O Manual de Sobrevivência</title>
+    
+    <!-- Ícone da Aba (Favicon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+    
+    <!-- Meta Tags para WhatsApp/Social -->
+    <meta property="og:title" content="Férias Sem Caos - O Manual de Sobrevivência">
+    <meta property="og:description" content="O método de TO, Fono e Nutri para salvar a rotina e a sanidade nas férias.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
+        /* Tipografia */
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, .btn-font { font-family: 'Montserrat', sans-serif; }
         
+        /* Hero Background */
         .hero-bg {
-            /* Imagem de crianças brincando em casa/sala bagunçada mas felizes */
             background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1560706834-819927d14f47?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
         }
 
+        /* Checkmarks personalizados */
         .check-list li {
             position: relative;
             padding-left: 2rem;
@@ -34,27 +51,26 @@
             font-size: 1.1rem;
         }
 
-        .x-list li {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 0.75rem;
-        }
-        .x-list li::before {
-            content: '\f00d';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: #EF4444;
-            font-size: 1.1rem;
-        }
-        
+        /* Interatividade */
         .card-expert {
             transition: transform 0.3s ease;
         }
         .card-expert:hover {
             transform: translateY(-5px);
+        }
+
+        .preview-page {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .preview-page:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -86,7 +102,7 @@
                 O método criado por uma <strong>Terapeuta Ocupacional, uma Fonoaudióloga e uma Nutricionista</strong> para regular a energia, melhorar a alimentação e garantir a conexão (sem telas o dia todo).
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#oferta" class="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-xl transform transition hover:scale-105 btn-font">
+                <a href="#oferta" class="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-xl transform transition hover:scale-105 btn-font text-center">
                     QUERO O MANUAL DE SOBREVIVÊNCIA
                 </a>
             </div>
@@ -94,12 +110,11 @@
         </div>
     </header>
 
-    <!-- O Problema: Identificação (Sem Foto) -->
+    <!-- O Problema -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">Se as férias mal começaram e você já se sente assim...</h2>
             
-            <!-- Layout ajustado: Centralizado e sem coluna de imagem -->
             <div class="bg-red-50 p-8 md:p-12 rounded-2xl border border-red-100 shadow-sm mx-auto">
                 <div class="space-y-8 max-w-2xl mx-auto">
                     <div class="flex items-start">
@@ -149,46 +164,129 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Pilar 1: TO -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-purple-500">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-purple-500 card-expert">
                     <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
                         <i class="fas fa-shapes"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ebook 01: Regulação & Rotina</h3>
                     <p class="text-xs text-purple-600 font-bold mb-4 uppercase">Por Juliana Bragança (Terapeuta Ocupacional)</p>
-                    <ul class="text-sm text-gray-600 space-y-3">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Monitor Sensorial:</strong> Aprenda a equilibrar atividades de gasto de energia e calma.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Planner Diário:</strong> O que fazer de manhã, tarde e noite para garantir o sono.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Brincadeiras Estratégicas:</strong> "Chão é lava", "Cabana do Silêncio" e mais.</li>
+                    <ul class="text-sm text-gray-600 space-y-3 check-list">
+                        <li><strong>Monitor Sensorial:</strong> Aprenda a equilibrar atividades de gasto de energia e calma.</li>
+                        <li><strong>Planner Diário:</strong> O que fazer de manhã, tarde e noite para garantir o sono.</li>
+                        <li><strong>Brincadeiras Estratégicas:</strong> "Chão é lava", "Cabana do Silêncio" e mais.</li>
                     </ul>
                 </div>
 
                 <!-- Pilar 2: Nutri -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-green-500">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-green-500 card-expert">
                     <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-2xl mb-6">
                         <i class="fas fa-apple-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ebook 02: Férias na Cozinha</h3>
                     <p class="text-xs text-green-600 font-bold mb-4 uppercase">Por Camila (Nutricionista Materno Infantil)</p>
-                    <ul class="text-sm text-gray-600 space-y-3">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Mundo do Talvez:</strong> Como vencer a seletividade brincando.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Atividades Sensoriais:</strong> Tinta comestível, Poção mágica e Detetive de alimentos.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Acordo de Ouro:</strong> Tirando a pressão do "tem que comer".</li>
+                    <ul class="text-sm text-gray-600 space-y-3 check-list">
+                        <li><strong>Mundo do Talvez:</strong> Como vencer a seletividade brincando.</li>
+                        <li><strong>Atividades Sensoriais:</strong> Tinta comestível, Poção mágica e Detetive de alimentos.</li>
+                        <li><strong>Acordo de Ouro:</strong> Tirando a pressão do "tem que comer".</li>
                     </ul>
                 </div>
 
                 <!-- Pilar 3: Fono -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-pink-500">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-pink-500 card-expert">
                     <div class="h-12 w-12 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 text-2xl mb-6">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ebook 03: Férias com Conexão</h3>
                     <p class="text-xs text-pink-600 font-bold mb-4 uppercase">Por Amanda Elizabeth (Fonoaudióloga)</p>
-                    <ul class="text-sm text-gray-600 space-y-3">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Script da Calma:</strong> O que falar (e o que não falar) na hora da crise.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Espera Divertida:</strong> Jogos sem telas para restaurantes e filas.</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Protocolo de Saída:</strong> Antecipação e regras visuais para evitar birras na rua.</li>
+                    <ul class="text-sm text-gray-600 space-y-3 check-list">
+                        <li><strong>Script da Calma:</strong> O que falar (e o que não falar) na hora da crise.</li>
+                        <li><strong>Espera Divertida:</strong> Jogos sem telas para restaurantes e filas.</li>
+                        <li><strong>Protocolo de Saída:</strong> Antecipação e regras visuais para evitar birras na rua.</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA DE PRÉVIA -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Espie por dentro do material 🧐</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Card 1: Planner -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
+                    <div class="h-64 bg-purple-100 flex items-center justify-center relative overflow-hidden p-2">
+                        <!-- IMAGEM AQUI -->
+                        <img 
+                            src="planner.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            alt="Prévia do Planner Sem Caos" 
+                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Planner de Rotina Visual</h4>
+                        <p class="text-xs text-gray-500">Organize manhã, tarde e noite com base nas janelas de energia.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Cards Fono -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
+                    <div class="h-64 bg-pink-100 flex items-center justify-center relative overflow-hidden p-2">
+                        <!-- IMAGEM AQUI -->
+                        <img 
+                            src="cards.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1628254747634-c50395e9f881?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            alt="Prévia dos Cards de Atividades" 
+                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Cards "SOS Espera"</h4>
+                        <p class="text-xs text-gray-500">Para imprimir e levar na bolsa: salvam o restaurante e a fila do banco.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Nutri -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
+                    <div class="h-64 bg-green-100 flex items-center justify-center relative overflow-hidden p-2">
+                        <!-- IMAGEM AQUI -->
+                        <img 
+                            src="nutri.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1596540306126-a4773229b37c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            alt="Criança brincando com comida saudável" 
+                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Receitas Sensoriais</h4>
+                        <p class="text-xs text-gray-500">Tinta de iogurte, massinha comestível e exploração sem medo.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Checklist -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
+                    <div class="h-64 bg-yellow-100 flex items-center justify-center relative overflow-hidden p-2">
+                        <!-- IMAGEM AQUI -->
+                        <img 
+                            src="checklist.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            alt="Checklist de Protocolos de Crise" 
+                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Protocolos de Crise</h4>
+                        <p class="text-xs text-gray-500">O que fazer (e o que falar) exatamente na hora da birra.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-sm text-gray-500 italic">Todo o material é digital (PDF) para você baixar e imprimir quantas vezes quiser.</p>
             </div>
         </div>
     </section>
@@ -254,9 +352,12 @@
                         <p class="text-xs text-gray-500">Pagamento único. Menos de R$ 1,00 por dia.</p>
                     </div>
 
-                    <button onclick="alert('Link para o seu Checkout')" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-2xl py-4 rounded-lg shadow-lg transform transition hover:scale-105 mb-4 btn-font animate-pulse">
+                    <a href="https://pay.kiwify.com.br/5FJGU6K" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold text-2xl py-4 rounded-lg shadow-lg transform transition hover:scale-105 mb-4 btn-font no-underline text-center">
                         QUERO COMPRAR AGORA
-                    </button>
+                    </a>
                     
                     <p class="text-xs text-gray-400 mt-4">Garantia de 7 dias ou seu dinheiro de volta.</p>
                 </div>
@@ -273,6 +374,7 @@
         </div>
     </footer>
 
+    <!-- Script para rolagem suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
