@@ -13,28 +13,21 @@
     <meta property="og:description" content="O método de TO, Fono e Nutri para salvar a rotina e a sanidade nas férias.">
     <meta property="og:type" content="website">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Tipografia */
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, .btn-font { font-family: 'Montserrat', sans-serif; }
         
-        /* Hero Background */
         .hero-bg {
+            /* Imagem de crianças brincando em casa/sala bagunçada mas felizes */
             background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1560706834-819927d14f47?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
         }
 
-        /* Checkmarks personalizados */
         .check-list li {
             position: relative;
             padding-left: 2rem;
@@ -51,26 +44,30 @@
             font-size: 1.1rem;
         }
 
-        /* Interatividade */
-        .card-expert {
-            transition: transform 0.3s ease;
+        .x-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
         }
-        .card-expert:hover {
-            transform: translateY(-5px);
+        .x-list li::before {
+            content: '\f00d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #EF4444;
+            font-size: 1.1rem;
         }
-
+        
+        /* Estilos para a Prévia do Material */
         .preview-page {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
         .preview-page:hover {
             transform: scale(1.02);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -102,7 +99,7 @@
                 O método criado por uma <strong>Terapeuta Ocupacional, uma Fonoaudióloga e uma Nutricionista</strong> para regular a energia, melhorar a alimentação e garantir a conexão (sem telas o dia todo).
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#oferta" class="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-xl transform transition hover:scale-105 btn-font text-center">
+                <a href="#oferta" class="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-xl transform transition hover:scale-105 btn-font">
                     QUERO O MANUAL DE SOBREVIVÊNCIA
                 </a>
             </div>
@@ -110,7 +107,7 @@
         </div>
     </header>
 
-    <!-- O Problema -->
+    <!-- O Problema: Identificação (Sem Foto) -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">Se as férias mal começaram e você já se sente assim...</h2>
@@ -164,66 +161,65 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Pilar 1: TO -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-purple-500 card-expert">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-purple-500">
                     <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
                         <i class="fas fa-shapes"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ebook 01: Regulação & Rotina</h3>
                     <p class="text-xs text-purple-600 font-bold mb-4 uppercase">Por Juliana Bragança (Terapeuta Ocupacional)</p>
-                    <ul class="text-sm text-gray-600 space-y-3 check-list">
-                        <li><strong>Monitor Sensorial:</strong> Aprenda a equilibrar atividades de gasto de energia e calma.</li>
-                        <li><strong>Planner Diário:</strong> O que fazer de manhã, tarde e noite para garantir o sono.</li>
-                        <li><strong>Brincadeiras Estratégicas:</strong> "Chão é lava", "Cabana do Silêncio" e mais.</li>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Monitor Sensorial:</strong> Aprenda a equilibrar atividades de gasto de energia e calma.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Planner Diário:</strong> O que fazer de manhã, tarde e noite para garantir o sono.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Brincadeiras Estratégicas:</strong> "Chão é lava", "Cabana do Silêncio" e mais.</li>
                     </ul>
                 </div>
 
                 <!-- Pilar 2: Nutri -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-green-500 card-expert">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-green-500">
                     <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-2xl mb-6">
                         <i class="fas fa-apple-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ebook 02: Férias na Cozinha</h3>
                     <p class="text-xs text-green-600 font-bold mb-4 uppercase">Por Camila (Nutricionista Materno Infantil)</p>
-                    <ul class="text-sm text-gray-600 space-y-3 check-list">
-                        <li><strong>Mundo do Talvez:</strong> Como vencer a seletividade brincando.</li>
-                        <li><strong>Atividades Sensoriais:</strong> Tinta comestível, Poção mágica e Detetive de alimentos.</li>
-                        <li><strong>Acordo de Ouro:</strong> Tirando a pressão do "tem que comer".</li>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Mundo do Talvez:</strong> Como vencer a seletividade brincando.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Atividades Sensoriais:</strong> Tinta comestível, Poção mágica e Detetive de alimentos.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Acordo de Ouro:</strong> Tirando a pressão do "tem que comer".</li>
                     </ul>
                 </div>
 
                 <!-- Pilar 3: Fono -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-pink-500 card-expert">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-pink-500">
                     <div class="h-12 w-12 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 text-2xl mb-6">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Ebook 03: Férias com Conexão</h3>
                     <p class="text-xs text-pink-600 font-bold mb-4 uppercase">Por Amanda Elizabeth (Fonoaudióloga)</p>
-                    <ul class="text-sm text-gray-600 space-y-3 check-list">
-                        <li><strong>Script da Calma:</strong> O que falar (e o que não falar) na hora da crise.</li>
-                        <li><strong>Espera Divertida:</strong> Jogos sem telas para restaurantes e filas.</li>
-                        <li><strong>Protocolo de Saída:</strong> Antecipação e regras visuais para evitar birras na rua.</li>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Script da Calma:</strong> O que falar (e o que não falar) na hora da crise.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Espera Divertida:</strong> Jogos sem telas para restaurantes e filas.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Protocolo de Saída:</strong> Antecipação e regras visuais para evitar birras na rua.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERIA DE PRÉVIA -->
+    <!-- NOVA SEÇÃO: PRÉVIA DO MATERIAL (Com Imagens) -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Espie por dentro do material 🧐</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 
-                <!-- Card 1: Planner -->
-                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-                    <div class="h-64 bg-purple-100 flex items-center justify-center relative overflow-hidden p-2">
-                        <!-- IMAGEM AQUI -->
+                <!-- Card Prévia 1: Planner -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center relative overflow-hidden">
                         <img 
                             src="planner.jpg" 
-                            onerror="this.src='https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            onerror="this.src='https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
                             alt="Prévia do Planner Sem Caos" 
-                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            class="w-full h-full object-cover"
                         >
                     </div>
                     <div class="p-4">
@@ -232,15 +228,14 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Cards Fono -->
-                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-                    <div class="h-64 bg-pink-100 flex items-center justify-center relative overflow-hidden p-2">
-                        <!-- IMAGEM AQUI -->
+                <!-- Card Prévia 2: Cards Fono -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-pink-100 flex items-center justify-center relative overflow-hidden">
                         <img 
                             src="cards.jpg" 
-                            onerror="this.src='https://images.unsplash.com/photo-1628254747634-c50395e9f881?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            onerror="this.src='https://images.unsplash.com/photo-1605218427368-35b863b82736?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
                             alt="Prévia dos Cards de Atividades" 
-                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            class="w-full h-full object-cover"
                         >
                     </div>
                     <div class="p-4">
@@ -249,15 +244,14 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Nutri -->
-                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-                    <div class="h-64 bg-green-100 flex items-center justify-center relative overflow-hidden p-2">
-                        <!-- IMAGEM AQUI -->
+                <!-- Card Prévia 3: Nutri -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-green-100 flex items-center justify-center relative overflow-hidden">
                         <img 
                             src="nutri.jpg" 
-                            onerror="this.src='https://images.unsplash.com/photo-1596540306126-a4773229b37c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            onerror="this.src='https://images.unsplash.com/photo-1596540306126-a4773229b37c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
                             alt="Criança brincando com comida saudável" 
-                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            class="w-full h-full object-cover"
                         >
                     </div>
                     <div class="p-4">
@@ -266,15 +260,14 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Checklist -->
-                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-                    <div class="h-64 bg-yellow-100 flex items-center justify-center relative overflow-hidden p-2">
-                        <!-- IMAGEM AQUI -->
+                <!-- Card Prévia 4: Checklist -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center relative overflow-hidden">
                         <img 
                             src="checklist.jpg" 
-                            onerror="this.src='https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'" 
+                            onerror="this.src='https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
                             alt="Checklist de Protocolos de Crise" 
-                            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            class="w-full h-full object-cover"
                         >
                     </div>
                     <div class="p-4">
@@ -311,7 +304,7 @@
     <!-- Bônus -->
     <section class="py-12 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-8">🎁 Bônus Exclusivos Inclusos</h2>
+            <h2 class="text-2xl font-bold mb-8">🎁 Bônus Exclusivos Inclusos no Combo</h2>
             <div class="flex flex-wrap justify-center gap-6">
                 <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg w-64 border border-white/20">
                     <i class="fas fa-print text-2xl mb-2"></i>
@@ -332,35 +325,102 @@
         </div>
     </section>
 
-    <!-- Oferta -->
+    <!-- Oferta Principal (Combo) -->
     <section id="oferta" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
                 <div class="bg-gray-900 text-white text-center py-4">
-                    <p class="font-bold text-lg uppercase tracking-wide">🔥 Oferta do Combo Férias</p>
+                    <p class="font-bold text-lg uppercase tracking-wide">🔥 Oferta do Combo Férias (Recomendado)</p>
                 </div>
                 <div class="p-8 md:p-12 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-gray-800">Leve a estratégia das 3 profissionais</h3>
                     <p class="text-gray-500 mb-6 text-sm">TO + Nutri + Fono = Paz Mental</p>
 
                     <div class="flex flex-col items-center justify-center space-y-2 mb-8 bg-purple-50 p-6 rounded-lg border border-purple-100">
-                        <p class="text-gray-400 line-through text-md">Valor individual somado: R$ 147,00</p>
+                        <!-- Ajustado para R$ 51,00 (3x17) -->
+                        <p class="text-gray-400 line-through text-md">Valor individual somado: R$ 51,00</p>
                         <div class="flex items-center gap-2">
                             <p class="text-purple-700 text-xl font-bold">Hoje:</p>
                         </div>
                         <p class="text-6xl font-extrabold text-green-500 tracking-tight">R$ 24,90</p>
-                        <p class="text-xs text-gray-500">Pagamento único. Menos de R$ 1,00 por dia.</p>
+                        <p class="text-xs text-gray-500">Pagamento único. Acesso vitalício.</p>
                     </div>
 
                     <a href="https://pay.kiwify.com.br/5FJGU6K" 
                        target="_blank" 
                        rel="noopener noreferrer"
                        class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold text-2xl py-4 rounded-lg shadow-lg transform transition hover:scale-105 mb-4 btn-font no-underline text-center">
-                        QUERO COMPRAR AGORA
+                        QUERO O COMBO COMPLETO
                     </a>
                     
                     <p class="text-xs text-gray-400 mt-4">Garantia de 7 dias ou seu dinheiro de volta.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: PRODUTOS INDIVIDUAIS -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Ou leve apenas o que precisa agora 👇</h3>
+            <p class="text-center text-gray-500 mb-10 text-sm">Se você precisa resolver apenas um problema específico, escolha seu guia individual.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                
+                <!-- Card Individual TO -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4 text-xl mx-auto"><i class="fas fa-shapes"></i></div>
+                    <h4 class="font-bold text-lg mb-2">Guia da Terapia Ocupacional</h4>
+                    <p class="text-sm text-gray-600 mb-4 h-16">Foco em Rotina, Sono e Regulação Sensorial (birras e agitação).</p>
+                    
+                    <!-- Preço TO -->
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-purple-600">R$ 17,00</span>
+                    </div>
+
+                    <a href="https://pay.kiwify.com.br/iV72OkE" target="_blank" class="block w-full text-center bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-700 font-bold py-2 rounded transition border border-gray-300">
+                        Comprar Individual
+                    </a>
+                    <!-- Link para a página de vendas específica -->
+                    <div class="mt-2"><a href="to.html" class="text-xs text-gray-400 underline hover:text-purple-600">Ver detalhes</a></div>
+                </div>
+
+                <!-- Card Individual Nutri -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-4 text-xl mx-auto"><i class="fas fa-apple-alt"></i></div>
+                    <h4 class="font-bold text-lg mb-2">Guia da Nutricionista</h4>
+                    <p class="text-sm text-gray-600 mb-4 h-16">Foco em Seletividade Alimentar e brincadeiras na cozinha.</p>
+                    
+                    <!-- Preço Nutri -->
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-green-600">R$ 17,00</span>
+                    </div>
+
+                    <a href="https://pay.kiwify.com.br/JvZzcxE" target="_blank" class="block w-full text-center bg-gray-100 hover:bg-green-600 hover:text-white text-gray-700 font-bold py-2 rounded transition border border-gray-300">
+                        Comprar Individual
+                    </a>
+                    <!-- Link para a página de vendas específica -->
+                    <div class="mt-2"><a href="nutri.html" class="text-xs text-gray-400 underline hover:text-green-600">Ver detalhes</a></div>
+                </div>
+
+                <!-- Card Individual Fono -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 mb-4 text-xl mx-auto"><i class="fas fa-comments"></i></div>
+                    <h4 class="font-bold text-lg mb-2">Guia da Fonoaudióloga</h4>
+                    <p class="text-sm text-gray-600 mb-4 h-16">Foco em Comunicação, "Saber Esperar" e Comportamento em público.</p>
+                    
+                    <!-- Preço Fono -->
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-pink-600">R$ 17,00</span>
+                    </div>
+
+                    <a href="https://pay.kiwify.com.br/8AJ1RUP" target="_blank" class="block w-full text-center bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-700 font-bold py-2 rounded transition border border-gray-300">
+                        Comprar Individual
+                    </a>
+                    <!-- Link para a página de vendas específica -->
+                    <div class="mt-2"><a href="fono.html" class="text-xs text-gray-400 underline hover:text-pink-600">Ver detalhes</a></div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -374,14 +434,16 @@
         </div>
     </footer>
 
-    <!-- Script para rolagem suave -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                // Previne scroll apenas se for link interno (começa com #)
+                if(this.getAttribute('href').startsWith('#') && this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
