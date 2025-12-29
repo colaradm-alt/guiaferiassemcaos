@@ -1,94 +1,393 @@
-<!-- TRECHO ORIGINAL DA SUA SEÇÃO -->
-<section class="py-16 bg-gray-100">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
-      Espie por dentro do material 🧐
-    </h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Férias Sem Caos - O Manual de Sobrevivência</title>
+    
+    <!-- Ícone da Aba (Favicon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+    
+    <!-- Meta Tags para WhatsApp/Social -->
+    <meta property="og:title" content="Férias Sem Caos - O Manual de Sobrevivência">
+    <meta property="og:description" content="O método de TO, Fono e Nutri para salvar a rotina e a sanidade nas férias.">
+    <meta property="og:type" content="website">
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, .btn-font { font-family: 'Montserrat', sans-serif; }
+        
+        .hero-bg {
+            /* Imagem de crianças brincando em casa/sala bagunçada mas felizes */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1560706834-819927d14f47?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
 
-      <!-- Planner -->
-      <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-        <div class="h-64 bg-purple-100 flex items-center justify-center p-2">
-          <img
-            src="./planner.jpg"
-            alt="Planner de Rotina Visual"
-            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-          >
-        </div>
-        <div class="p-4">
-          <h4 class="font-bold text-gray-800 text-sm mb-1">
-            Planner de Rotina Visual
-          </h4>
-          <p class="text-xs text-gray-500">
-            Organize manhã, tarde e noite com base nas janelas de energia.
-          </p>
-        </div>
-      </div>
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .check-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #10B981;
+            font-size: 1.1rem;
+        }
 
-      <!-- Cards SOS -->
-      <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-        <div class="h-64 bg-pink-100 flex items-center justify-center p-2">
-          <img
-            src="./cards.jpg"
-            alt="Cards SOS Espera"
-            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-          >
-        </div>
-        <div class="p-4">
-          <h4 class="font-bold text-gray-800 text-sm mb-1">
-            Cards "SOS Espera"
-          </h4>
-          <p class="text-xs text-gray-500">
-            Para imprimir e levar na bolsa.
-          </p>
-        </div>
-      </div>
+        .x-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .x-list li::before {
+            content: '\f00d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #EF4444;
+            font-size: 1.1rem;
+        }
+        
+        .card-expert {
+            transition: transform 0.3s ease;
+        }
+        .card-expert:hover {
+            transform: translateY(-5px);
+        }
 
-      <!-- Nutri -->
-      <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-        <div class="h-64 bg-green-100 flex items-center justify-center p-2">
-          <img
-            src="./nutri.jpg"
-            alt="Receitas Sensoriais"
-            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-          >
-        </div>
-        <div class="p-4">
-          <h4 class="font-bold text-gray-800 text-sm mb-1">
-            Receitas Sensoriais
-          </h4>
-          <p class="text-xs text-gray-500">
-            Exploração alimentar sem medo.
-          </p>
-        </div>
-      </div>
+        /* Estilos para a Prévia do Material */
+        .preview-page {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .preview-page:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-      <!-- Checklist -->
-      <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200 group">
-        <div class="h-64 bg-yellow-100 flex items-center justify-center p-2">
-          <img
-            src="./checklist.jpg"
-            alt="Protocolos de Crise"
-            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-          >
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm py-4 fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-pink-600 tracking-tighter">
+                <i class="fas fa-puzzle-piece mr-2"></i>Férias<span class="text-purple-600">SemCaos</span>
+            </div>
+            <a href="#oferta" class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">
+                Quero Paz Nessas Férias
+            </a>
         </div>
-        <div class="p-4">
-          <h4 class="font-bold text-gray-800 text-sm mb-1">
-            Protocolos de Crise
-          </h4>
-          <p class="text-xs text-gray-500">
-            O que fazer e o que falar na hora da birra.
-          </p>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-gray-800 py-24 md:py-32 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-block bg-pink-100 text-pink-700 text-xs md:text-sm font-bold px-4 py-1 rounded-full mb-6 uppercase tracking-wide border border-pink-200">
+                A solução para o recesso escolar
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight max-w-4xl mx-auto">
+                As aulas acabaram e a rotina sumiu?<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Salve a sanidade da sua casa</span> nessas férias.
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-600">
+                O método criado por uma <strong>Terapeuta Ocupacional, uma Fonoaudióloga e uma Nutricionista</strong> para regular a energia, melhorar a alimentação e garantir a conexão (sem telas o dia todo).
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#oferta" class="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-xl transform transition hover:scale-105 btn-font">
+                    QUERO O MANUAL DE SOBREVIVÊNCIA
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-500"><i class="fas fa-check-circle text-green-500 mr-1"></i> Acesso imediato ao Combo Completo</p>
         </div>
-      </div>
+    </header>
 
-    </div>
+    <!-- O Problema: Identificação (Sem Foto) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">Se as férias mal começaram e você já se sente assim...</h2>
+            
+            <div class="bg-red-50 p-8 md:p-12 rounded-2xl border border-red-100 shadow-sm mx-auto">
+                <div class="space-y-8 max-w-2xl mx-auto">
+                    <div class="flex items-start">
+                        <div class="bg-white p-3 rounded-full mr-4 text-red-500 text-xl flex-shrink-0 shadow-sm">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Crianças "subindo pelas paredes"</h3>
+                            <p class="text-gray-600">Sem o gasto de energia da escola, a agitação toma conta e a casa vira um campo de guerra.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-white p-3 rounded-full mr-4 text-red-500 text-xl flex-shrink-0 shadow-sm">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">"Não quero comer isso!"</h3>
+                            <p class="text-gray-600">A quebra de rotina piora a seletividade alimentar. As refeições viram batalhas estressantes.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-white p-3 rounded-full mr-4 text-red-500 text-xl flex-shrink-0 shadow-sm">
+                            <i class="fas fa-tired"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800">Birras e crises intermináveis</h3>
+                            <p class="text-gray-600">Você fala e ninguém ouve. O "Script da Calma" parece impossível de aplicar no calor do momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-xl text-gray-700 font-medium">A culpa não é sua. <br>Falta apenas uma <strong>estratégia sensorial e comportamental</strong> para lidar com a falta de rotina.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="text-center mt-8">
-      <p class="text-sm text-gray-500 italic">
-        Todo o material é digital (PDF) para baixar e imprimir.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- A Solução: Os 3 Pilares -->
+    <section class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-purple-600 font-bold tracking-wider uppercase text-sm">O Combo Completo</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">3 Especialistas na sua Casa</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Unimos Terapia Ocupacional, Nutrição e Fonoaudiologia em um material prático para salvar suas férias.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Pilar 1: TO -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-purple-500">
+                    <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 text-2xl mb-6">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ebook 01: Regulação & Rotina</h3>
+                    <p class="text-xs text-purple-600 font-bold mb-4 uppercase">Por Juliana Bragança (Terapeuta Ocupacional)</p>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Monitor Sensorial:</strong> Aprenda a equilibrar atividades de gasto de energia e calma.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Planner Diário:</strong> O que fazer de manhã, tarde e noite para garantir o sono.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Brincadeiras Estratégicas:</strong> "Chão é lava", "Cabana do Silêncio" e mais.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 2: Nutri -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-green-500">
+                    <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 text-2xl mb-6">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ebook 02: Férias na Cozinha</h3>
+                    <p class="text-xs text-green-600 font-bold mb-4 uppercase">Por Camila (Nutricionista Materno Infantil)</p>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Mundo do Talvez:</strong> Como vencer a seletividade brincando.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Atividades Sensoriais:</strong> Tinta comestível, Poção mágica e Detetive de alimentos.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Acordo de Ouro:</strong> Tirando a pressão do "tem que comer".</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 3: Fono -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition border-t-4 border-pink-500">
+                    <div class="h-12 w-12 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 text-2xl mb-6">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ebook 03: Férias com Conexão</h3>
+                    <p class="text-xs text-pink-600 font-bold mb-4 uppercase">Por Amanda Elizabeth (Fonoaudióloga)</p>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Script da Calma:</strong> O que falar (e o que não falar) na hora da crise.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Espera Divertida:</strong> Jogos sem telas para restaurantes e filas.</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Protocolo de Saída:</strong> Antecipação e regras visuais para evitar birras na rua.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: PRÉVIA DO MATERIAL (Com Imagens) -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Espie por dentro do material 🧐</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Card Prévia 1: Planner -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem do Planner -->
+                        <img 
+                            src="planner.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Prévia do Planner Sem Caos" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Planner de Rotina Visual</h4>
+                        <p class="text-xs text-gray-500">Organize manhã, tarde e noite com base nas janelas de energia.</p>
+                    </div>
+                </div>
+
+                <!-- Card Prévia 2: Cards Fono -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-pink-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem dos Cards -->
+                        <img 
+                            src="cards.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1605218427368-35b863b82736?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Prévia dos Cards de Atividades" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Cards "SOS Espera"</h4>
+                        <p class="text-xs text-gray-500">Para imprimir e levar na bolsa: salvam o restaurante e a fila do banco.</p>
+                    </div>
+                </div>
+
+                <!-- Card Prévia 3: Nutri -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-green-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem da Nutri -->
+                        <img 
+                            src="nutri.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1596540306126-a4773229b37c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Criança brincando com comida saudável" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Receitas Sensoriais</h4>
+                        <p class="text-xs text-gray-500">Tinta de iogurte, massinha comestível e exploração sem medo.</p>
+                    </div>
+                </div>
+
+                <!-- Card Prévia 4: Checklist -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem do Checklist -->
+                        <img 
+                            src="checklist.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Checklist de Protocolos de Crise" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Protocolos de Crise</h4>
+                        <p class="text-xs text-gray-500">O que fazer (e o que falar) exatamente na hora da birra.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-sm text-gray-500 italic">Todo o material é digital (PDF) para você baixar e imprimir quantas vezes quiser.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos / Transformação -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">O que muda na prática?</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-red-500 mb-4 flex items-center"><i class="fas fa-times-circle mr-2"></i> Férias do Caos (Sem o Método)</h4>
+                    <p class="text-gray-600 mb-4 text-sm">"Eu passava o dia gritando. As crianças ficavam no tablet o dia todo porque eu não sabia mais o que fazer. Na hora de comer, era choro. Eu voltava a trabalhar mais cansada do que sai."</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border border-green-200 shadow-sm">
+                    <h4 class="font-bold text-green-600 mb-4 flex items-center"><i class="fas fa-check-circle mr-2"></i> Férias com Conexão (Com o Método)</h4>
+                    <p class="text-gray-600 mb-4 text-sm">"Aprendi a usar a 'Janela da Manhã' para gastar energia e a 'Cabana do Silêncio' à tarde. O jantar virou brincadeira de detetive e meu filho provou cenoura pela primeira vez! Casa em paz."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bônus -->
+    <section class="py-12 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-8">🎁 Bônus Exclusivos Inclusos</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg w-64 border border-white/20">
+                    <i class="fas fa-print text-2xl mb-2"></i>
+                    <h3 class="font-bold">Planner de Rotina 2025</h3>
+                    <p class="text-xs mt-2 text-gray-200">PDF para imprimir e organizar manhã, tarde e noite.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg w-64 border border-white/20">
+                    <i class="fas fa-list-check text-2xl mb-2"></i>
+                    <h3 class="font-bold">Checklist de Restaurante</h3>
+                    <p class="text-xs mt-2 text-gray-200">Cards para recortar e levar na bolsa (SOS Espera).</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-lg w-64 border border-white/20">
+                    <i class="fas fa-gamepad text-2xl mb-2"></i>
+                    <h3 class="font-bold">Cards de Brincadeiras</h3>
+                    <p class="text-xs mt-2 text-gray-200">Ideias rápidas de regulação para momentos de crise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta -->
+    <section id="oferta" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+                <div class="bg-gray-900 text-white text-center py-4">
+                    <p class="font-bold text-lg uppercase tracking-wide">🔥 Oferta do Combo Férias</p>
+                </div>
+                <div class="p-8 md:p-12 text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Leve a estratégia das 3 profissionais</h3>
+                    <p class="text-gray-500 mb-6 text-sm">TO + Nutri + Fono = Paz Mental</p>
+
+                    <div class="flex flex-col items-center justify-center space-y-2 mb-8 bg-purple-50 p-6 rounded-lg border border-purple-100">
+                        <p class="text-gray-400 line-through text-md">Valor individual somado: R$ 147,00</p>
+                        <div class="flex items-center gap-2">
+                            <p class="text-purple-700 text-xl font-bold">Hoje:</p>
+                        </div>
+                        <p class="text-6xl font-extrabold text-green-500 tracking-tight">R$ 24,90</p>
+                        <p class="text-xs text-gray-500">Pagamento único. Menos de R$ 1,00 por dia.</p>
+                    </div>
+
+                    <!-- Botão corrigido e centralizado -->
+                    <a href="https://pay.kiwify.com.br/5FJGU6K" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold text-2xl py-4 rounded-lg shadow-lg transform transition hover:scale-105 mb-4 btn-font no-underline text-center">
+                        QUERO COMPRAR AGORA
+                    </a>
+                    
+                    <p class="text-xs text-gray-400 mt-4">Garantia de 7 dias ou seu dinheiro de volta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-600 py-8 text-center text-sm border-t">
+        <div class="container mx-auto px-4">
+            <p class="font-bold text-gray-800">Férias Sem Caos &copy; 2025</p>
+            <p class="mt-2">Contato: <a href="mailto:co.laradm@gmail.com" class="text-purple-600 hover:text-purple-800 transition">co.laradm@gmail.com</a></p>
+            <p class="mt-2 text-xs text-gray-400">Este produto não substitui parecer médico profissional. Sempre consulte um especialista para casos específicos.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
