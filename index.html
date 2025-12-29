@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia de Férias Sem Caos - O Manual de Sobrevivência</title>
+    
+    <!-- Ícone da Aba (Favicon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+    
+    <!-- Meta Tags para WhatsApp/Social -->
+    <meta property="og:title" content="Férias Sem Caos - O Manual de Sobrevivência">
+    <meta property="og:description" content="O método de TO, Fono e Nutri para salvar a rotina e a sanidade nas férias.">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, .btn-font { font-family: 'Montserrat', sans-serif; }
@@ -56,6 +66,16 @@
         .card-expert:hover {
             transform: translateY(-5px);
         }
+
+        /* Estilos para a Prévia do Material */
+        .preview-page {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .preview-page:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -99,7 +119,6 @@
         <div class="container mx-auto px-4 max-w-4xl">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">Se as férias mal começaram e você já se sente assim...</h2>
             
-            <!-- Layout ajustado: Centralizado e sem coluna de imagem -->
             <div class="bg-red-50 p-8 md:p-12 rounded-2xl border border-red-100 shadow-sm mx-auto">
                 <div class="space-y-8 max-w-2xl mx-auto">
                     <div class="flex items-start">
@@ -193,6 +212,89 @@
         </div>
     </section>
 
+    <!-- NOVA SEÇÃO: PRÉVIA DO MATERIAL (Com Imagens) -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Espie por dentro do material 🧐</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Card Prévia 1: Planner -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem do Planner -->
+                        <img 
+                            src="planner.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Prévia do Planner Sem Caos" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Planner de Rotina Visual</h4>
+                        <p class="text-xs text-gray-500">Organize manhã, tarde e noite com base nas janelas de energia.</p>
+                    </div>
+                </div>
+
+                <!-- Card Prévia 2: Cards Fono -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-pink-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem dos Cards -->
+                        <img 
+                            src="cards.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1605218427368-35b863b82736?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Prévia dos Cards de Atividades" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Cards "SOS Espera"</h4>
+                        <p class="text-xs text-gray-500">Para imprimir e levar na bolsa: salvam o restaurante e a fila do banco.</p>
+                    </div>
+                </div>
+
+                <!-- Card Prévia 3: Nutri -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-green-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem da Nutri -->
+                        <img 
+                            src="nutri.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1596540306126-a4773229b37c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Criança brincando com comida saudável" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Receitas Sensoriais</h4>
+                        <p class="text-xs text-gray-500">Tinta de iogurte, massinha comestível e exploração sem medo.</p>
+                    </div>
+                </div>
+
+                <!-- Card Prévia 4: Checklist -->
+                <div class="bg-white rounded-xl overflow-hidden preview-page border border-gray-200">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center relative overflow-hidden">
+                        <!-- Imagem do Checklist -->
+                        <img 
+                            src="checklist.jpg" 
+                            onerror="this.src='https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'" 
+                            alt="Checklist de Protocolos de Crise" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1">Protocolos de Crise</h4>
+                        <p class="text-xs text-gray-500">O que fazer (e o que falar) exatamente na hora da birra.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-sm text-gray-500 italic">Todo o material é digital (PDF) para você baixar e imprimir quantas vezes quiser.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Depoimentos / Transformação -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -254,9 +356,13 @@
                         <p class="text-xs text-gray-500">Pagamento único. Menos de R$ 1,00 por dia.</p>
                     </div>
 
-                    <button onclick="alert('Link para o seu Checkout')" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-2xl py-4 rounded-lg shadow-lg transform transition hover:scale-105 mb-4 btn-font animate-pulse">
+                    <!-- Botão corrigido e centralizado -->
+                    <a href="https://pay.kiwify.com.br/5FJGU6K" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold text-2xl py-4 rounded-lg shadow-lg transform transition hover:scale-105 mb-4 btn-font no-underline text-center">
                         QUERO COMPRAR AGORA
-                    </button>
+                    </a>
                     
                     <p class="text-xs text-gray-400 mt-4">Garantia de 7 dias ou seu dinheiro de volta.</p>
                 </div>
